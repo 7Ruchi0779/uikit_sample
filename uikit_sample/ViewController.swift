@@ -8,9 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
-    
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,9 +38,10 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         ])
     }
     @objc func Btnobjtap() {
-        let alt = UIAlertController(title: "ポップアップ", message: "中のボタンを押してください", preferredStyle: .alert)
-        let innerButton = UIAlertAction(title: "なかのボタン", style: .default){ _ in
-            print("ボタンが押された")
+        let alt = UIAlertController(title: "ポップアップ", message: "作業を開始しますか？", preferredStyle: .alert)
+        let innerButton = UIAlertAction(title: "開始", style: .default){ _ in
+            let secoundC = SecoundViewController()
+            self.navigationController?.pushViewController(secoundC, animated: true)
         }
         let cancelButton = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         

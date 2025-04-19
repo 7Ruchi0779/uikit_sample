@@ -15,6 +15,8 @@
 		D38659772DAB7FB0007F32BA /* uikit_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38659762DAB7FB0007F32BA /* uikit_sampleTests.swift */; };
 		D38659812DAB7FB0007F32BA /* uikit_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38659802DAB7FB0007F32BA /* uikit_sampleUITests.swift */; };
 		D38659832DAB7FB0007F32BA /* uikit_sampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38659822DAB7FB0007F32BA /* uikit_sampleUITestsLaunchTests.swift */; };
+		D3B21E382DB40F1A003DB86E /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B21E372DB40F1A003DB86E /* SecoundViewController.swift */; };
+		D3B21E3A2DB417C8003DB86E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D3B21E392DB417C8003DB86E /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D386597C2DAB7FB0007F32BA /* uikit_sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uikit_sampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38659802DAB7FB0007F32BA /* uikit_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uikit_sampleUITests.swift; sourceTree = "<group>"; };
 		D38659822DAB7FB0007F32BA /* uikit_sampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uikit_sampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3B21E372DB40F1A003DB86E /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
+		D3B21E392DB417C8003DB86E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		D38659502DAB7FAE007F32BA = {
 			isa = PBXGroup;
 			children = (
+				D3B21E392DB417C8003DB86E /* .gitignore */,
 				D386595B2DAB7FAE007F32BA /* uikit_sample */,
 				D38659752DAB7FB0007F32BA /* uikit_sampleTests */,
 				D386597F2DAB7FB0007F32BA /* uikit_sampleUITests */,
@@ -103,6 +108,7 @@
 				D386596A2DAB7FAF007F32BA /* LaunchScreen.storyboard */,
 				D386596D2DAB7FAF007F32BA /* Info.plist */,
 				D38659652DAB7FAE007F32BA /* uikit_sample.xcdatamodeld */,
+				D3B21E372DB40F1A003DB86E /* SecoundViewController.swift */,
 			);
 			path = uikit_sample;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D386596C2DAB7FAF007F32BA /* LaunchScreen.storyboard in Resources */,
+				D3B21E3A2DB417C8003DB86E /* .gitignore in Resources */,
 				D38659692DAB7FAF007F32BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 			files = (
 				D38659672DAB7FAE007F32BA /* uikit_sample.xcdatamodeld in Sources */,
 				D38659612DAB7FAE007F32BA /* ViewController.swift in Sources */,
+				D3B21E382DB40F1A003DB86E /* SecoundViewController.swift in Sources */,
 				D386595D2DAB7FAE007F32BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
