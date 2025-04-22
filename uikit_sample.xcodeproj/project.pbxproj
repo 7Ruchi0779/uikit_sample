@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33B873F2DB7863200E7106C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B873E2DB7863200E7106C /* ResultViewController.swift */; };
 		D386595D2DAB7FAE007F32BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386595C2DAB7FAE007F32BA /* AppDelegate.swift */; };
 		D38659612DAB7FAE007F32BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38659602DAB7FAE007F32BA /* ViewController.swift */; };
 		D38659672DAB7FAE007F32BA /* uikit_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D38659652DAB7FAE007F32BA /* uikit_sample.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D33B873E2DB7863200E7106C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		D38659592DAB7FAE007F32BA /* uikit_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uikit_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D386595C2DAB7FAE007F32BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38659602DAB7FAE007F32BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D386596D2DAB7FAF007F32BA /* Info.plist */,
 				D38659652DAB7FAE007F32BA /* uikit_sample.xcdatamodeld */,
 				D3B21E372DB40F1A003DB86E /* SecoundViewController.swift */,
+				D33B873E2DB7863200E7106C /* ResultViewController.swift */,
 			);
 			path = uikit_sample;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33B873F2DB7863200E7106C /* ResultViewController.swift in Sources */,
 				D38659672DAB7FAE007F32BA /* uikit_sample.xcdatamodeld in Sources */,
 				D38659612DAB7FAE007F32BA /* ViewController.swift in Sources */,
 				D3B21E382DB40F1A003DB86E /* SecoundViewController.swift in Sources */,

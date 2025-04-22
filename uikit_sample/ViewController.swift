@@ -20,7 +20,7 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         label.translatesAutoresizingMaskIntoConstraints = false
         
         let btn = UIButton(type:.system)
-        btn.setTitle("テキスト", for: .normal)
+        btn.setTitle("作業を開始する", for: .normal)
         btn.setTitleColor(.blue, for: .normal)
         btn.backgroundColor = .black
         btn.frame = CGRect(x:330,y:600,width:100,height:100)
