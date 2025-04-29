@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D33B873F2DB7863200E7106C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B873E2DB7863200E7106C /* ResultViewController.swift */; };
+		D34A502D2DBAB13B00DE6850 /* TimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A502C2DBAB13B00DE6850 /* TimeData.swift */; };
 		D386595D2DAB7FAE007F32BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386595C2DAB7FAE007F32BA /* AppDelegate.swift */; };
 		D38659612DAB7FAE007F32BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38659602DAB7FAE007F32BA /* ViewController.swift */; };
 		D38659672DAB7FAE007F32BA /* uikit_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D38659652DAB7FAE007F32BA /* uikit_sample.xcdatamodeld */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D33B873E2DB7863200E7106C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		D34A502C2DBAB13B00DE6850 /* TimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeData.swift; sourceTree = "<group>"; };
 		D38659592DAB7FAE007F32BA /* uikit_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uikit_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D386595C2DAB7FAE007F32BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38659602DAB7FAE007F32BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				D386596D2DAB7FAF007F32BA /* Info.plist */,
 				D38659652DAB7FAE007F32BA /* uikit_sample.xcdatamodeld */,
 				D3B21E372DB40F1A003DB86E /* SecoundViewController.swift */,
-				D33B873E2DB7863200E7106C /* ResultViewController.swift */,
+				D34A502C2DBAB13B00DE6850 /* TimeData.swift */,
 			);
 			path = uikit_sample;
 			sourceTree = "<group>";
@@ -264,10 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D33B873F2DB7863200E7106C /* ResultViewController.swift in Sources */,
 				D38659672DAB7FAE007F32BA /* uikit_sample.xcdatamodeld in Sources */,
 				D38659612DAB7FAE007F32BA /* ViewController.swift in Sources */,
 				D3B21E382DB40F1A003DB86E /* SecoundViewController.swift in Sources */,
+				D34A502D2DBAB13B00DE6850 /* TimeData.swift in Sources */,
 				D386595D2DAB7FAE007F32BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +440,7 @@
 				DEVELOPMENT_TEAM = KKWLB24HVX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = uikit_sample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(SE_BUNDLE_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -450,8 +451,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.takayuki.uikit-sample";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takayuki.uikit-sample-debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SE_BUNDLE_DISPLAY_NAME = "WorkBench-Debug";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,9 +467,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UV5AZ96AQA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = uikit_sample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(SE_BUNDLE_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -480,6 +483,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.takayuki.uikit-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SE_BUNDLE_DISPLAY_NAME = WorkBench;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

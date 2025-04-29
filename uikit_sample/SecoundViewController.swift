@@ -7,13 +7,8 @@
 
 import UIKit
 
-struct TimeData{
-    let hour:Int
-    let minutes:Int
-    let secound:Int
-}
-
 class SecoundViewController: UIViewController {
+    var stattime:Date?
     var countLabel = UILabel()
     var time:Float = 0.0
     var timer = Timer()
@@ -24,14 +19,14 @@ class SecoundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countLabel.text = String(time)
         view.backgroundColor = .cyan
-        title = "SecoundScreen"
+        title = "作業時間"
+        stattime = Date()
         
         stopbutton.setTitle("停止", for: .normal)
         stopbutton.setTitleColor(.blue, for: .normal)
         stopbutton.backgroundColor = .yellow
-        stopbutton.frame = CGRect(x:450,y:600,width:100,height:100)
+        stopbutton.frame = CGRect(x:390,y:600,width:100,height:100)
         stopbutton.layer.cornerRadius = 30
         stopbutton.alpha = 5
         stopbutton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
@@ -39,7 +34,7 @@ class SecoundViewController: UIViewController {
         restartbutton.setTitle("再開", for: .normal)
         restartbutton.setTitleColor(.black, for: .normal)
         restartbutton.backgroundColor = .blue
-        restartbutton.frame = CGRect(x:450,y:600,width:100,height:100)
+        restartbutton.frame = CGRect(x:390,y:600,width:100,height:100)
         restartbutton.layer.cornerRadius = 30
         restartbutton.alpha = 5
         restartbutton.addTarget(self, action: #selector(restartButtonTapped), for: .touchUpInside)
@@ -47,12 +42,14 @@ class SecoundViewController: UIViewController {
         finishbutton.setTitle("終了", for: .normal)
         finishbutton.setTitleColor(.black, for: .normal)
         finishbutton.backgroundColor = .red
-        finishbutton.frame = CGRect(x:290,y:600,width:100,height:100)
+        finishbutton.frame = CGRect(x:260,y:600,width:100,height:100)
         finishbutton.layer.cornerRadius = 30
         finishbutton.alpha = 5
         finishbutton.addTarget(self, action: #selector(finishButtonTapped), for: .touchUpInside)
                 
-        countLabel.frame = CGRect(x:330,y:450,width:100,height:100)
+        countLabel.text = String(time)
+        countLabel.font = .systemFont(ofSize: 20)
+        countLabel.frame = CGRect(x:290,y:400,width:180,height:150)
         
         view.addSubview(countLabel)
         view.addSubview(stopbutton)
@@ -69,7 +66,7 @@ class SecoundViewController: UIViewController {
             let minutes = Int(self.time / 60)
             let secound = Int(self.time) % 60
             //let milliSecond = Int(self.time * 100) % 100
-            self.countLabel.text = String(format: "%02d%02d:%02d", hour,minutes,secound)
+            self.countLabel.text = String(format: "大体%02d時間%02d分%02d", hour,minutes,secound)
         })
     }
     @objc func stopButtonTapped() {
@@ -83,16 +80,41 @@ class SecoundViewController: UIViewController {
         startTimer()
     }
     @objc func finishButtonTapped() {
+        guard let stat = stattime else { return }
         timer.invalidate()
-        let hour = Int(self.time / 3600)
-        let minutes = Int(self.time / 60)
-        let secound = Int(self.time) % 60
         
-        let timedata = TimeData(hour: hour, minutes: minutes, secound: secound)
-        
-        let Result = ResultViewController()
-        Result.passedTime = timedata
-        
-        navigationController?.pushViewController(Result, animated: true)
+        let alert = UIAlertController(title: "作業終了", message: "作業内容の入力", preferredStyle: .alert)
+        alert.addTextField{ textField in
+            textField.placeholder = "例：読書、開発など"
+        }
+        alert.addAction(UIAlertAction(title: "保存", style: .default, handler: { _ in
+            let taskname = alert.textFields?.first?.text ?? "未設定"
+            let end = Date()
+            let timeDate = TimeData(taskName: taskname, starttime: stat, endtime: end)
+            self.saveNewTimeDate(timeDate)
+            self.navigationController?.popViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel))
+        present(alert, animated: true)
+    }
+    func saveNewTimeDate(_ newDate:TimeData){
+        var current = loadSaveTimeDate()
+        current.insert(newDate, at: 0)
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        if let encoded = try? encoder.encode(current){
+            UserDefaults.standard.set(encoded, forKey: "timeDataList")
+        }
+    }
+    
+    func loadSaveTimeDate() -> [TimeData] {
+        if let date = UserDefaults.standard.data(forKey: "timeDataList"){
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            if let saved = try? decoder.decode([TimeData].self, from: date){
+                return saved
+            }
+        }
+        return []
     }
 }
